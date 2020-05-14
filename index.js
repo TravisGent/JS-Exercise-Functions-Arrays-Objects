@@ -86,8 +86,6 @@ function temperatureInF(temp, cOrF) {
 }
 
 
-
-
 /**
  * ### Challenge `makePersonObject`
  * 
@@ -104,8 +102,13 @@ function temperatureInF(temp, cOrF) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(inputId, inputName, inputEmail) {
+  var makeObject = {
+    id: inputId,
+    name: inputName,
+    email: inputEmail
+  };
+  return makeObject;
 }
 
 /**
@@ -121,10 +124,14 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(inputId, inputName, inputEmail) {
+  var makeObject = {
+    id: inputId,
+    name: inputName,
+    email: inputEmail
+  };
+  return makeObject.name;
 }
-
 
 /**
  * ### Challenge `appleIndex`
@@ -141,9 +148,12 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(appleFinder) {
+  return appleFinder.indexOf("apple");
 }
+
+var newArrayOne = ["orange", "agdsg", "apple"];
+console.log(appleIndex(newArrayOne));
 
 /**
  * ### Challenge `isItAnApple`
@@ -160,9 +170,26 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+
+function isItAnApple(appleTrueArray) {
+  var trueIfApple = [];
+  for (let i = 0; i < appleTrueArray.length; i++)
+  {
+    if (appleTrueArray[i] === "apple")
+    {
+      trueIfApple.push("true");
+    }
+    else
+    {
+      trueIfApple.push("false");
+    }
+  }
+  return trueIfApple;
 }
+
+var newArrayTwo = [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ];
+
+console.log(isItAnApple(newArrayTwo));
 
 
 
